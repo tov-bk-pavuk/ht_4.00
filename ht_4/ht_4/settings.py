@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent  # Как это работает?
@@ -21,8 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent  # Как это работа�
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-sbxo3of#67x541(ix$mp4jt*bjqhq+_@stt8x=z7^uk*o)8nuo'
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", 'django-insecure-sbxo3of#67x541(ix$mp4jt*bjqhq+_@stt8x=z7^uk*o)8nuo')
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY",
+                            'django-insecure-sbxo3of#67x541(ix$mp4jt*bjqhq+_@stt8x=z7^uk*o)8nuo')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -34,11 +34,11 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',  # Фреймворк администратора
-    'django.contrib.auth',  # Фреймворк авторизации, где нужно создать суперпользователя
+    'django.contrib.auth',  # Фреймворк авторизации
     'django.contrib.contenttypes',  # Фреймворк типов данных
     'django.contrib.sessions',  # Фреймворк сессии
     'django.contrib.messages',  # Фреймворк сообщений
-    'django.contrib.staticfiles',  # Фреймворк для работы со статическими файлами
+    'django.contrib.staticfiles',  # Фреймворк статическими файлами
     'polls.apps.PollsConfig',  # Учебное приложение
 ]
 
