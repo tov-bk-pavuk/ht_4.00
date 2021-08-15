@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',  # Фреймворк сессии
     'django.contrib.messages',  # Фреймворк сообщений
     'django.contrib.staticfiles',  # Фреймворк статическими файлами
+
     'polls.apps.PollsConfig',  # Учебное приложение
 ]
 
