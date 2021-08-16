@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+
+def index(request):
+    return HttpResponse("Аллиуйа, Аминь. Я так и не понял, что было не так. "
+                        "Похоже, что порядок URL перечисленный в файле urls.py "
+                        "папки проекта имел значение.")
