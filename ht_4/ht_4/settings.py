@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',  # Фреймворк статическими файлами
 
     'polls.apps.PollsConfig',  # Учебное приложение
+    'triangle.apps.PollsConfig',  # Приложение для треугольника
 ]
 
 MIDDLEWARE = [
