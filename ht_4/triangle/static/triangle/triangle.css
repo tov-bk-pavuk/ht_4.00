@@ -1,0 +1,10 @@
+{% load static %}
+body {
+    background-color: darkgray;
+    color: white;
+    font-weight: lighter;
+    background-image: url("img/triangle.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 23%;
+}

@@ -1,14 +1,27 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
     <meta charset="utf-8" />
     <title>Triangle task</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'triangle/triangle.css' %}">
 </head>
 <body>
     <h1>Найти гипотенузу</h1>
-    <p>{{ text }}</p>
-    <p>Первая сторона треугольника: {{side_a}}</p>
-    <p>Вторая сторона треугольника: {{side_b}}</p>
-    <p>Тип треугольника: {{tri_type}}</p>
+    <form>
+        <p>{{ text }}</p>
+        <ul style="list-style-type: none">
+            <li><input type="radio" name="answer", value="u_side_a">
+                первая сторона треугольника: {{side_a}}</li>
+            <li><input type="radio" name="answer", value="u_side_a">
+                вторая сторона треугольника: {{side_b}}</li>
+            <li><input type="radio" name="answer", value="u_side_a">
+                тип треугольника: {{tri_type}}</li>
+        </ul>
+        <table>
+            {{ tr_form }}
+        </table>
+    </form>
 </body>
 </html>
