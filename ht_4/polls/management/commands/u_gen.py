@@ -4,8 +4,6 @@ from django.core.management.base import BaseCommand
 
 from faker import Faker
 
-# from polls.models import User  # Старый кастомный User bp моделей приложения
-
 fake = Faker()
 
 
@@ -13,7 +11,7 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
 
-        parser.add_argument('amount', type=int, choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        parser.add_argument('amount', type=int, choices=range(1, 11),
                             help=u'amount - Количество пользователей')
 
     def handle(self, *args, **options):

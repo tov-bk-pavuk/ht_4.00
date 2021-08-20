@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Triangle task</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'triangle/triangle.css' %}">
+</head>
+<body>
+    <h1>Найти гипотенузу</h1>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{ tr_form }}
+        </table>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
