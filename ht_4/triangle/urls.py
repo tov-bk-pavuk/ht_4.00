@@ -4,5 +4,4 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='triangle/templates/triangle/index'),
-    #  path('title', views.title, name='title'),
 ]
